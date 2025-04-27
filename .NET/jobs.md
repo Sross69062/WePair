@@ -1,6 +1,6 @@
 JobService
 ***************************************************************************************************
-
+```C#
 public class JobService : IJobService
 {
     IDataProvider _data = null;
@@ -289,9 +289,11 @@ public class JobService : IJobService
         return table;
     }
 }
+```
 ***************************************************************************************************
 JobApiController
 ***************************************************************************************************
+```C#
 public class JobApiController : BaseApiController
 {
     private IJobService _service = null; 
@@ -533,9 +535,11 @@ public class JobApiController : BaseApiController
         return StatusCode(iCode, response);
     }
 }
+```
 ***************************************************************************************************
 Job Data Models
 ***************************************************************************************************
+```C#
 public class JobAddRequest
 {
     [Required]
@@ -572,7 +576,9 @@ public class JobAddRequest
     public List<int> Skills { get; set; }
 
 }
+```
 ***************************************************************************************************
+```C#
 public class JobSkillAddRequest
 {
     [Required]
@@ -582,12 +588,16 @@ public class JobSkillAddRequest
     [Required]
     public List<int> Skills { get; set; }
 }
+```
 ***************************************************************************************************
+```C#
 public class JobUpdateRequest : JobAddRequest, IModelIdentifier
 {
     public int Id { get; set; }
 }
+```
 ***************************************************************************************************
+```C#
 public class BaseJob
 {
     public LookUp Type { get; set; }
@@ -602,7 +612,9 @@ public class BaseJob
 
     public string Contact { get; set; }
 }
+```
 ***************************************************************************************************
+```C#
 public class Job : BaseJob
 {
     public int Id { get; set; }
@@ -627,11 +639,14 @@ public class Job : BaseJob
     
     public string OrgDescription { get; set; }
 }
+```
 ***************************************************************************************************
+```C#
 public class SkillMatch
 {
     public int JobSkillId { get; set; }
 
     public int UserSkillId { get; set; }
 }
+```
 ***************************************************************************************************
