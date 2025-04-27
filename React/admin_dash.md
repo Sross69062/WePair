@@ -1,6 +1,6 @@
 AdmindDashboard
 ***************************************************************************************************
-```js
+```jsx
 const AdminDashboard = () => {
   const [dashDetails, setDashDetails] = useState({
     totalUsers: 0,
@@ -38,7 +38,7 @@ export default AdminDashboard;
 ***************************************************************************************************
 Analytics
 ***************************************************************************************************
-```js
+```jsx
 const Analytics = ({ dashDetails }) => {
   const _logger = debug.extend("Analytics");
 
