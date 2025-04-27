@@ -1,5 +1,6 @@
 JobsCardLg
 ***************************************************************************************************
+```jsx
 function JobCardLg(props) {
   const job = props.job;
   _logger(job);
@@ -102,9 +103,11 @@ JobCardLg.propTypes = {
 };
 
 export default JobCardLg;
+```
 ***************************************************************************************************
 JobCardSm
 ***************************************************************************************************
+```jsx
 function JobCardSm(props) {
   const [cardHovered, setCardHovered] = useState(false);
   const job = props.job;
@@ -217,9 +220,11 @@ JobCardSm.propTypes = {
 };
 
 export default JobCardSm;
+```
 ***************************************************************************************************
 Job Cards Css
 ***************************************************************************************************
+```css
 .job-card {
     overflow-y: scroll;
     max-height: 750px;
@@ -255,9 +260,11 @@ Job Cards Css
 .job-skills-checklist {
     z-index: 3;
 }
+```
 ***************************************************************************************************
 JobForm
 ***************************************************************************************************
+```jsx
 function JobForm() {
   const [formData, setFormData] = useState({
     id: "",
@@ -505,9 +512,11 @@ function JobForm() {
 }
 
 export default JobForm;
+```
 ***************************************************************************************************
 Jobs
 ***************************************************************************************************
+```jsx
 function Jobs({ currentUser }) {
   const _logger = debug.extend("jobs");
   const nav = useNavigate();
@@ -1103,9 +1112,11 @@ Jobs.propTypes = {
 };
 
 export default Jobs;
+```
 ***************************************************************************************************
 OrgJobCard
 ***************************************************************************************************
+```jsx
 function OrgJobCard(props) {
   const aJob = props.job;
   const nav = useNavigate();
@@ -1214,9 +1225,11 @@ OrgJobCard.propTypes = {
   deactivateClicked: PropTypes.func,
 };
 export default OrgJobCard;
+```
 ***************************************************************************************************
 OrgJobPosts
 ***************************************************************************************************
+```jsx
 function OrgJobPosts() {
   const _logger = debug.extend("OrgJobPosts");
   const nav = useNavigate();
@@ -1309,10 +1322,11 @@ function OrgJobPosts() {
 }
 
 export default OrgJobPosts;
+```
 ***************************************************************************************************
 SkillMatchCard
 ***************************************************************************************************
-
+```jsx
 function SkillMatchCard(props) {
   const _logger = debug.extend("SkillMatchCard");
   const job = props.job;
@@ -1379,9 +1393,11 @@ SkillMatchCard.propTypes = {
 };
 
 export default SkillMatchCard;
+```
 ***************************************************************************************************
 SkillsMatchChecklist
 ***************************************************************************************************
+```jsx
 function SkillsMatchChecklist(props) {
   const job = props.job;
 
@@ -1450,9 +1466,11 @@ SkillsMatchChecklist.propTypes = {
 };
 
 export default SkillsMatchChecklist;
+```
 ***************************************************************************************************
 JobSchema
 ***************************************************************************************************
+```js
 export const jobSchema = Yup.object().shape({
   jobTypeId: Yup.number().min(1).required("Field Required"),
   title: Yup.string()
@@ -1472,9 +1490,11 @@ export const jobSchema = Yup.object().shape({
     .max(200, "Max Characters Reached")
     .email("Must be valid email"),
 });
+```
 ***************************************************************************************************
 JobService
 ***************************************************************************************************
+```js
 import axios from "axios";
 import {
   onGlobalError,
@@ -1579,9 +1599,11 @@ jobService.getById = (id) => {
 };
 
 export default jobService;
+```
 ***************************************************************************************************
 OrganizationService
 ***************************************************************************************************
+```js
 let getJobsByOrgId = (id, pageIndex, pageSize) => {
   const config = {
     method: "GET",
@@ -1592,4 +1614,5 @@ let getJobsByOrgId = (id, pageIndex, pageSize) => {
   };
   return axios(config).then(onGlobalSuccess).catch(onGlobalError);
 };
+```
 ***************************************************************************************************
