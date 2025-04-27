@@ -1,5 +1,6 @@
 AnalyticsController
 ***************************************************************************************************
+```C#
 public class AnalyticsApiController : BaseApiController
 {
     private IAnalyticsService _analyticsService = null;
@@ -39,9 +40,11 @@ public class AnalyticsApiController : BaseApiController
         return StatusCode(iCode, response);
     }
 }
+```
 ***************************************************************************************************
 AdminDashController
 ***************************************************************************************************
+```C#
 public class AdminDashApiController : BaseApiController
 {
     private IAdminDashService _service = null;
@@ -78,9 +81,11 @@ public class AdminDashApiController : BaseApiController
         return result;
     }
 }
+```
 ***************************************************************************************************
 AdminDashService
 ***************************************************************************************************
+```C#
 public class AdminDashService : IAdminDashService
 {
     IDataProvider _data = null;
@@ -118,9 +123,11 @@ public class AdminDashService : IAdminDashService
         return list;
     }
 }
+```
 ***************************************************************************************************
 AnalyticsService
 ***************************************************************************************************
+```C#
 public class AnalyticsService : IAnalyticsService
 {
     private IWebHostEnvironment _env;
@@ -162,9 +169,11 @@ public class AnalyticsService : IAnalyticsService
         return response.Rows;
     }
 }
+```
 ***************************************************************************************************
 Admin Dash Data Models
 ***************************************************************************************************
+```C#
 public class GoogleAnalyticsReportRequest
 {
     public string StartDate { get; set; }
@@ -175,7 +184,9 @@ public class GoogleAnalyticsReportRequest
 
     public List<Dimension> Dimensions { get; set; }
 }
+```
 ***************************************************************************************************
+```C#
 public class AdminDashInfo
 {
     public int TotalUsers { get; set; }
@@ -184,4 +195,5 @@ public class AdminDashInfo
 
     public int TotalJobs { get; set; }
 }
+```
 ***************************************************************************************************
