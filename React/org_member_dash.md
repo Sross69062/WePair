@@ -1,5 +1,6 @@
 OrgMemberDashboard
 ***************************************************************************************************
+```jsx
 const OrgMemberDashboard = ({ currentUser }) => {
 
   const _logger = debug.extend("OrgMemberDashboard");
@@ -102,9 +103,11 @@ OrgMemberDashboard.propTypes = {
   currentUser: PropTypes.number.isRequired,
 };
 export default OrgMemberDashboard;
+```jsx
 ***************************************************************************************************
 AssignedCoursesDash
 ***************************************************************************************************
+```jsx
 const AssignedCoursesDash = ({ courses }) => {
   const _logger = debug.extend("courseDash");
   const mapCourseInfo = (info, index) => {
@@ -158,9 +161,11 @@ AssignedCoursesDash.propTypes = {
 };
 
 export default AssignedCoursesDash;
+```jsx
 ***************************************************************************************************
 CoWorkerCard
 ***************************************************************************************************
+```jsx
 const CoWorkerCard = ({ coWorker }) => {
   return (
     <React.Fragment>
@@ -201,9 +206,11 @@ CoWorkerCard.propTypes = {
 };
 
 export default CoWorkerCard;
+```jsx
 ***************************************************************************************************
 OrgMemberProfileCard
 ***************************************************************************************************
+```jsx
 const OrgMemberProfileCard = ({ profile }) => {
   return (
     <Fragment>
@@ -263,9 +270,11 @@ OrgMemberProfileCard.propTypes = {
   }).isRequired,
 };
 export default OrgMemberProfileCard;
+```jsx
 ***************************************************************************************************
 Org Member Dash CSS
 ***************************************************************************************************
+```css
 .coworker-card {
     overflow-y: scroll;
     max-height: 240px;
@@ -278,9 +287,11 @@ Org Member Dash CSS
 .apptandcourse-card {
     height: 280px;
 }
+```
 ***************************************************************************************************
 OrganizationService
 ***************************************************************************************************
+```js
 let orgMemberDashInfo = () => {
   const config = {
     method: "GET",
@@ -291,4 +302,5 @@ let orgMemberDashInfo = () => {
   };
   return axios(config).then(onGlobalSuccess).catch(onGlobalError);
 };
+```
 ***************************************************************************************************
