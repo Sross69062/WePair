@@ -1,6 +1,6 @@
 JobService
-public class JobService : IJobService
 ***************************************************************************************************
+public class JobService : IJobService
 {
     IDataProvider _data = null;
     ILocationService _locationService = null;
