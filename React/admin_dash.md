@@ -1,5 +1,6 @@
 AdmindDashboard
 ***************************************************************************************************
+```js
 const AdminDashboard = () => {
   const [dashDetails, setDashDetails] = useState({
     totalUsers: 0,
@@ -33,9 +34,11 @@ const AdminDashboard = () => {
   );
 };
 export default AdminDashboard;
+```
 ***************************************************************************************************
 Analytics
 ***************************************************************************************************
+```js
 const Analytics = ({ dashDetails }) => {
   const _logger = debug.extend("Analytics");
 
@@ -1168,9 +1171,11 @@ Analytics.propTypes = {
 };
 
 export default Analytics;
+```
 ***************************************************************************************************
 AdminDashService
 ***************************************************************************************************
+```js
 const adminDashService = { endpoint: `${API_HOST_PREFIX}/api/admindash` };
 
 adminDashService.getInfo = () => {
@@ -1185,9 +1190,11 @@ adminDashService.getInfo = () => {
 };
 
 export default adminDashService;
+```
 ***************************************************************************************************
 AnalyticsService
 ***************************************************************************************************
+```js
 const _logger = debug.extend("Analytics Service");
 
 const analyticsService = { endpoint: `${API_HOST_PREFIX}/api/analytics/` };
@@ -1206,4 +1213,5 @@ analyticsService.analyticsRequest = (payload) => {
 };
 
 export default analyticsService;
+```
 ***************************************************************************************************
