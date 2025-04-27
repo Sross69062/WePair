@@ -1,5 +1,6 @@
 OrgMemberDashData
 ***************************************************************************************************
+```C#
 public OrgMemberDashData GetOrgMemberDashData(int userId)
 {
     OrgMemberDashData dashData = null;
@@ -86,9 +87,11 @@ public OrgMemberDashData GetOrgMemberDashData(int userId)
     });
     return dashData;
 }
+```
 ***************************************************************************************************
 GetDashData
 ***************************************************************************************************
+```C#
 public ActionResult<ItemResponse<OrgMemberDashData>> GetDashData()
 {
     int iCode = 200;
@@ -117,16 +120,20 @@ public ActionResult<ItemResponse<OrgMemberDashData>> GetDashData()
 
     return StatusCode(iCode, itemResponse);
 }
+```
 ***************************************************************************************************
 Org Member Dash Data Models
 ***************************************************************************************************
+```C#
 public class AssignedCourse
 {
     public string CourseName { get; set; }
     
     public string CourseSubject { get; set; }
 }
+```
 ***************************************************************************************************
+```C#
 public class CoWorker
 {
     public BaseUser Details { get; set; }
@@ -135,7 +142,9 @@ public class CoWorker
 
     public string CompanyEmail { get; set; }
 }
+```
 ***************************************************************************************************
+```C#
 public class OrgMemberDashProfile
 {
     public string Position { get; set; }
@@ -150,7 +159,9 @@ public class OrgMemberDashProfile
     
     public int OrgId { get; set; }
 }
+```
 ***************************************************************************************************
+```C#
 public class OrgMemberDashData : OrgMemberDashProfile
 {
     public List<UserDashAppointmentInfo> AppointmentInfo { get; set; }
@@ -161,4 +172,5 @@ public class OrgMemberDashData : OrgMemberDashProfile
     
     public List<UserDashAppointmentInfo> PastAppointments { get; set; }
 }
+```
 ***************************************************************************************************
